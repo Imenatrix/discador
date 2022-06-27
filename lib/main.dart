@@ -50,13 +50,13 @@ class Teclado extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.yellow,
-      padding: EdgeInsets.fromLTRB(30, 45, 30, 45),
+      padding: const EdgeInsets.fromLTRB(30, 45, 30, 45),
       child: Wrap(
         spacing: 10,
         direction: Axis.vertical,
         crossAxisAlignment: WrapCrossAlignment.center,
         children: [
-          Text(
+          const Text(
             'Discador...',
             style: TextStyle(
               fontSize: 20,
