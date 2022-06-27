@@ -44,11 +44,7 @@ class Body extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text('Discador...'),
-          ...teclado.map(
-            (linha) => Linha(
-              linha: linha,
-            ),
-          )
+          ...teclado.map((linha) => Linha(linha: linha))
         ],
       ),
     );
@@ -67,14 +63,21 @@ class Linha extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        ...linha.map(
-          (digito) => ElevatedButton(
-            onPressed: () => print(digito),
-            child: Text(digito),
-          ),
-        )
-      ],
+      children: [...linha.map((digito) => BotaoTeclado(digito: digito))],
+    );
+  }
+}
+
+class BotaoTeclado extends StatelessWidget {
+  final String digito;
+
+  const BotaoTeclado({required this.digito, Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () => print(digito),
+      child: Text(digito),
     );
   }
 }
