@@ -39,6 +39,23 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Column(
+        children: [
+          ...teclado.map(
+            (linha) => Row(
+              children: [
+                ...linha.map(
+                  (digito) => ElevatedButton(
+                    onPressed: () => print(digito),
+                    child: Text(digito),
+                  ),
+                )
+              ],
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
