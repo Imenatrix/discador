@@ -48,13 +48,17 @@ class Teclado extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      spacing: 10,
-      direction: Axis.vertical,
-      children: [
-        Text('Discador...'),
-        ...teclado.map((linha) => Linha(linha: linha))
-      ],
+    return Container(
+      color: Colors.yellow,
+      padding: EdgeInsets.fromLTRB(30, 45, 30, 45),
+      child: Wrap(
+        spacing: 10,
+        direction: Axis.vertical,
+        children: [
+          Text('Discador...'),
+          ...teclado.map((linha) => Linha(linha: linha))
+        ],
+      ),
     );
   }
 }
