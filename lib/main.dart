@@ -30,6 +30,13 @@ class Home extends StatelessWidget {
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
 
+  static const teclado = [
+    ['1', '2', '3'],
+    ['4', '5', '6'],
+    ['7', '8', '9'],
+    ['*', '0', '#']
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container();
