@@ -40,8 +40,8 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Wrap(
+        direction: Axis.vertical,
         children: [
           Text('Discador...'),
           ...teclado.map((linha) => Linha(linha: linha))
@@ -61,8 +61,7 @@ class Linha extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return Wrap(
       children: [...linha.map((digito) => BotaoTeclado(digito: digito))],
     );
   }
