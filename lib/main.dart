@@ -55,7 +55,15 @@ class Teclado extends StatelessWidget {
         spacing: 10,
         direction: Axis.vertical,
         children: [
-          Text('Discador...'),
+          Text(
+            'Discador...',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              backgroundColor: Colors.black,
+            ),
+          ),
           ...teclado.map((linha) => Linha(linha: linha))
         ],
       ),
