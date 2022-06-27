@@ -41,10 +41,12 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text('Discador...'),
           ...teclado.map(
             (linha) => Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ...linha.map(
                   (digito) => ElevatedButton(
