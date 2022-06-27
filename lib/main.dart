@@ -30,6 +30,13 @@ class Home extends StatelessWidget {
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
 
+  @override
+  Widget build(BuildContext context) {
+    return const Center(child: Teclado());
+  }
+}
+
+class Teclado extends StatelessWidget {
   static const teclado = [
     ['1', '2', '3'],
     ['4', '5', '6'],
@@ -37,17 +44,17 @@ class Body extends StatelessWidget {
     ['*', '0', '#']
   ];
 
+  const Teclado({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Wrap(
-        spacing: 10,
-        direction: Axis.vertical,
-        children: [
-          Text('Discador...'),
-          ...teclado.map((linha) => Linha(linha: linha))
-        ],
-      ),
+    return Wrap(
+      spacing: 10,
+      direction: Axis.vertical,
+      children: [
+        Text('Discador...'),
+        ...teclado.map((linha) => Linha(linha: linha))
+      ],
     );
   }
 }
@@ -76,9 +83,13 @@ class BotaoTeclado extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () => print(digito),
-      child: Text(digito),
+    return SizedBox(
+      width: 60,
+      height: 35,
+      child: ElevatedButton(
+        onPressed: () => print(digito),
+        child: Text(digito),
+      ),
     );
   }
 }
