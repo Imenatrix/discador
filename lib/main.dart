@@ -54,6 +54,7 @@ class Teclado extends StatelessWidget {
       child: Wrap(
         spacing: 10,
         direction: Axis.vertical,
+        crossAxisAlignment: WrapCrossAlignment.center,
         children: [
           Text(
             'Discador...',
