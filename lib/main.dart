@@ -41,6 +41,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Wrap(
+        spacing: 10,
         direction: Axis.vertical,
         children: [
           Text('Discador...'),
@@ -62,6 +63,7 @@ class Linha extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
+      spacing: 25,
       children: [...linha.map((digito) => BotaoTeclado(digito: digito))],
     );
   }
