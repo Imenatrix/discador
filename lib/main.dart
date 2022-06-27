@@ -42,6 +42,7 @@ class Body extends StatelessWidget {
     return Center(
       child: Column(
         children: [
+          Text('Discador...'),
           ...teclado.map(
             (linha) => Row(
               children: [
